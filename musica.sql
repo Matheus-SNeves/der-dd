@@ -47,3 +47,36 @@ CREATE TABLE Curtida (
 );
 
 SHOW TABLES;
+
+-- Inserir 3 usuários
+INSERT INTO Usuario (nome, idade, foto, data_nascimento) VALUES
+('Alice', 25, 'alice.jpg', '1999-03-15'),
+('Bob', 30, 'bob.jpg', '1994-07-22'),
+('Carol', 28, 'carol.jpg', '1996-12-05');
+
+-- Inserir 5 músicas
+INSERT INTO Musica (titulo, duracao) VALUES
+('Song 1', 180),
+('Song 2', 210),
+('Song 3', 200),
+('Song 4', 240),
+('Song 5', 190);
+
+-- Inserir 1 playlist para cada usuário
+INSERT INTO Playlist (usuario_id, data_criacao) VALUES
+(1, '2024-09-01'),
+(2, '2024-09-01'),
+(3, '2024-09-01');
+
+-- Associar músicas às playlists
+INSERT INTO PlaylistMusica (playlist_id, musica_id) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 2),
+(2, 3),
+(2, 4),
+(3, 3),
+(3, 4),
+(3, 5);
+
